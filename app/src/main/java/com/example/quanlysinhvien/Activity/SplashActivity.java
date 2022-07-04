@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,6 +31,13 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         },TimeOut_Millis);
+    }
+    private void animation() {
+        Animation animation = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.animation_fadein);
+        Hinh.startAnimation(animation);
+        txtTen.startAnimation(animation);
+        txtPow.startAnimation(animation);
+        txtQl.startAnimation(animation);
     }
     private void AnhXa(){
         Hinh = findViewById(R.id.imgHinh);
