@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#3489fd"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SplashActivity">
+    <ImageView
+        android:id="@+id/imgHinh"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/a"/>
+    <TextView
+        android:id="@+id/txtQl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quan ly Sinh Vien"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imgHinh"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+    <ProgressBar
+        android:id="@+id/Progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtQl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        />
+
+    <TextView
+        android:id="@+id/txtPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100sp"
+        android:textColor="#ffff"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtHoTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lê Đức Bảo"
+        android:textColor="#ffff"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="27dp"/>
+</RelativeLayout>
