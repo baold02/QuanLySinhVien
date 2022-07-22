@@ -1,11 +1,9 @@
-
 package com.example.quanlysinhvien.Activity;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -14,36 +12,45 @@ import android.widget.TextView;
 
 import com.example.quanlysinhvien.R;
 
-public class SplashActivity extends AppCompatActivity {
-   ImageView Hinh;
-   TextView txtPow, txtTen, txtQl;
-   ProgressBar progressBar;
-   static int TimeOut_Millis = 3000;
 
+public class    SplashActivity extends AppCompatActivity {
+    ImageView imghinh;
+    TextView txtten, txtpower, txthoten;
+    ProgressBar progressBar;
+    static int TimeOut_Millis = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        AnhXa();
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
-        },TimeOut_Millis);
+        anhXa();
+        animation();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+
+                finish();
+            }
+        }, TimeOut_Millis);
+        ;
     }
+
+    // tạo animation cho slash
     private void animation() {
         Animation animation = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.animation_fadein);
-        Hinh.startAnimation(animation);
-        txtTen.startAnimation(animation);
-        txtPow.startAnimation(animation);
-        txtQl.startAnimation(animation);
+        imghinh.startAnimation(animation);
+        txthoten.startAnimation(animation);
+        txtpower.startAnimation(animation);
+        txtten.startAnimation(animation);
     }
-    private void AnhXa(){
-        Hinh = findViewById(R.id.imgHinh);
-        txtPow = findViewById(R.id.txtPower);
-        txtTen = findViewById(R.id.txtHoTen);
-        txtQl = findViewById(R.id.txtQl);
 
+    // ánh xạ
+    private void anhXa() {
+        imghinh = findViewById(R.id.hinh);
+        txtten = findViewById(R.id.assignment);
+        txtpower = findViewById(R.id.power);
+        txthoten = findViewById(R.id.hoten);
     }
 }

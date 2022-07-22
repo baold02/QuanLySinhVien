@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#3489fd"
     android:layout_height="match_parent"
-    tools:context=".Activity.SplashActivity">
+    android:background="#3489FD">
+
     <ImageView
-        android:id="@+id/imgHinh"
+        android:layout_marginTop="50dp"
+        android:id="@+id/hinh"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/a"/>
+        android:src="@drawable/a" />
+
     <TextView
-        android:id="@+id/txtQl"
+        android:id="@+id/assignment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quan ly Sinh Vien"
-        android:textSize="40dp"
+        android:layout_below="@+id/hinh"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imgHinh"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="8dp"
+        android:text="Assignment"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
     <ProgressBar
-        android:id="@+id/Progress"
+
+        android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtQl"
+        android:layout_below="@+id/assignment"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15sp"
-        />
+        android:layout_marginTop="20dp" />
 
     <TextView
-        android:id="@+id/txtPower"
+        android:id="@+id/power"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
         android:text="Powered by"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100sp"
         android:textColor="#ffff"
-        android:textSize="18dp"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/txtHoTen"
+        android:id="@+id/hoten"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lê Đức Bảo"
-        android:textColor="#ffff"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="65dp"
         android:layout_centerHorizontal="true"
-        android:textSize="27dp"/>
+        android:layout_marginBottom="65dp"
+        android:text="Lê Đức Bảo"
+        android:textColor="#fff"
+        android:textSize="22sp" />
+
 </RelativeLayout>
